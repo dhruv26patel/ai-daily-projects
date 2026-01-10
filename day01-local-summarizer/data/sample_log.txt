@@ -1,0 +1,8 @@
+[2026-01-09 10:12:01] INFO Starting service...
+[2026-01-09 10:12:04] WARN Redis connection slow (timeout=1200ms)
+[2026-01-09 10:12:09] ERROR Payment API failed: 502 Bad Gateway
+[2026-01-09 10:12:10] ERROR Retrying request (attempt=1)
+[2026-01-09 10:12:11] ERROR Retrying request (attempt=2)
+[2026-01-09 10:12:14] INFO Request succeeded after retries
+[2026-01-09 10:12:16] WARN Disk usage at 92% on /var
+[2026-01-09 10:12:20] INFO Healthcheck OK
