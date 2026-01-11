@@ -1,0 +1,5 @@
+Discussed API latency issues.
+John will investigate Redis slowness by Friday.
+Priya to check payment gateway failures.
+We should reduce disk usage on prod servers.
+Next meeting scheduled for Monday.
