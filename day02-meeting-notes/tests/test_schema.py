@@ -1,17 +1,44 @@
-from src.schema import SummaryResult
+from src.schema import SummaryResult, ActionItem
 
 
-def test_schema_valid_example():
+def test_project2_schema_valid_example():
     """
-    This test makes sure our schema works.
-    It's not calling the AI (tests should be fast + stable).
+    Unit test for Project 2 schema.
+    This test does NOT call the AI.
+    It only verifies schema validation works correctly.
     """
+
     obj = SummaryResult(
-        summary="Service started, some warnings and a retryable error occurred.",
-        top_issues=["Redis slow connection", "Payment API 502", "Disk usage high"],
-        action_items=["Investigate Redis latency", "Check Payment API health", "Clean disk space"],
-        severity="medium",
+        summary="Discussed backend issues and assigned follow-up tasks.",
+        action_items=[
+            ActionItem(
+                task="Investigate Redis latency",
+                owner="John",
+                priority="high",
+                due_date="Friday",
+            ),
+            ActionItem(
+                task="Check payment gateway failures",
+                owner="Priya",
+                priority="medium",
+                due_date="unknown",
+            ),
+            ActionItem(
+                task="Reduce disk usage on prod servers",
+                owner="unassigned",
+                priority="medium",
+                due_date="unknown",
+            ),
+        ],
     )
-    assert obj.severity in ["low", "medium", "high"]
-    assert len(obj.top_issues) >= 1
+
+    # Basic assertions
+    assert isinstance(obj.summary, str)
     assert len(obj.action_items) >= 1
+
+    # Check each action item
+    for item in obj.action_items:
+        assert item.task != ""
+        assert item.owner != ""
+        assert item.priority in ["low", "medium", "high"]
+        assert isinstance(item.due_date, str)

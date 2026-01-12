@@ -1,0 +1,4 @@
+Overfitting happens when a model learns noise instead of patterns.
+Underfitting happens when the model is too simple.
+Regularization helps reduce overfitting.
+L1 leads to sparsity, L2 shrinks weights.
