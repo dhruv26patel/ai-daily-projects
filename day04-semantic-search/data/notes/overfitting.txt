@@ -1,0 +1,3 @@
+Overfitting happens when a model learns noise in the training data instead of general patterns.
+It performs well on training but poorly on unseen test data.
+Common fixes: more data, regularization, early stopping, dropout.

@@ -1,0 +1,3 @@
+Regularization reduces overfitting by adding a penalty for model complexity.
+L2 regularization shrinks weights; L1 encourages sparsity.
+Dropout and early stopping are also regularization techniques.

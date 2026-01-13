@@ -1,0 +1,3 @@
+Underfitting happens when a model is too simple to capture the underlying pattern.
+It performs poorly on both training and test sets.
+Fixes: increase model capacity, add features, train longer.
